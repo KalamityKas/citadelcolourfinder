@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-image: linear-gradient(#666666, #333333);
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	width: auto;
+	margin: auto;
+	padding-left: 2em;
+	display: inline-block;
+	text-align: center;
+}
+
+.footer {
+	text-align: center;
+	font-size: 0.8em;
+	padding: 1em;
+	color: #BBBBFF;
+}
+
+.footer a {
+	color: #DDDDFF;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	margin: 1em 0;
+	color: #DDDDFF;
+}
+
+#searchForm {
+	background: white;
+	border-radius: 1.5em;
+	padding: 1em;
+	display: inline-block;
+}
+
+#searchForm #search {
+	border: 0;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	cursor: pointer;
+	background: #725068;
+	margin-left: 1em;
+}
+
+#results {
+	display: none;
+	background: #DDDDDD;
+	border-radius: 1.5em;
+	padding: 1em;
+	margin-top: 0.5em;
+}
+
+#results .paint {
+	padding: 0.3em;
+	margin: 0.2em 0;
+	border-radius: 1em;
+	background-image: linear-gradient(to right, #FFFFFF , #EEEEEE);
+}
+
+#results .paint p {
+	display: inline-block;
+	font-weight: bold;
+	margin: 0.4em;
+}
+
+#results .paint .show, #results .paint .metal {
+	height: 1.5em;
+	width: 1.5em;
+	display: inline-block;
+	float: right;
+	border-radius: 50%;
+	border: 0.2em solid #333333;
+}
+
+#results .paint .metal {
+	background-image: linear-gradient(-45deg, #333333, #777777 , #555555);
+	font-weight: bold;
+	text-align: center;
+	color: #DDDDDD;
+	margin-right: 0.3em;
+}
