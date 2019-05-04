@@ -50,7 +50,7 @@ h1 {
 	border-radius: 1.5em;
 	padding: 1em;
 	display: inline-block;
-	max-width: 70;
+	max-width: 70%;
 }
 
 #searchForm #search, .imagePicker .button {
