@@ -15,11 +15,11 @@ body {
 }
 
 .content {
-	width: auto;
-	margin: auto;
-	padding-left: 2em;
+	width: 100%;
 	display: inline-block;
 	text-align: center;
+	max-height: 90%;
+	overflow: auto;
 }
 
 .footer {
@@ -45,20 +45,22 @@ h1 {
 	color: #DDDDFF;
 }
 
-#searchForm {
+#searchForm, .imagePicker {
 	background: white;
 	border-radius: 1.5em;
 	padding: 1em;
 	display: inline-block;
 }
 
-#searchForm #search {
+#searchForm #search, .imagePicker .button {
 	border: 0;
 	border-radius: 0.5em;
 	padding: 0.5em;
 	cursor: pointer;
 	background: #725068;
 	margin-left: 1em;
+	font-weight: bold;
+	color: white;
 }
 
 #results {
@@ -66,7 +68,7 @@ h1 {
 	background: #DDDDDD;
 	border-radius: 1.5em;
 	padding: 1em;
-	margin-top: 0.5em;
+	margin: 0.5em 2em;
 }
 
 #results .paint {
@@ -97,4 +99,18 @@ h1 {
 	text-align: center;
 	color: #DDDDDD;
 	margin-right: 0.3em;
+}
+
+#imageTarget {
+	max-width: 40%;
+	max-height: 50%;
+	cursor: crosshair;
+}
+
+.imagePicker {
+	max-height: 30%;
+}
+
+.imagePicker p {
+	margin: 0.5em;
 }

@@ -74,3 +74,46 @@ function compareColour(index, target) {
 		return 9999;
 	}
 }
+
+// Load the Picture
+
+var loadPicture = function(loaded) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('imageTarget');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+
+    $.fn.rgbaClick=function(f){
+		return this.click(function(e){
+			var ctx=$('<canvas>').attr({width:this.width,height:this.height})[0].getContext('2d');
+			ctx.drawImage(this, 0, 0, this.width, this.height);
+			e.rgb=ctx.getImageData(e.offsetX, e.offsetY, 1, 1).data
+			f.call(this,e)
+		})
+	}
+	$(function() {
+		$('#imageTarget').rgbaClick(function(e){
+			console.log(e);
+			$("#colour").val(RGBToHex(e.rgb[0], e.rgb[1], e.rgb[2]));
+			$("#search").click();
+		})
+	});
+
+};
+
+function RGBToHex(r,g,b) {
+  r = r.toString(16);
+  g = g.toString(16);
+  b = b.toString(16);
+
+  if (r.length == 1)
+    r = "0" + r;
+  if (g.length == 1)
+    g = "0" + g;
+  if (b.length == 1)
+    b = "0" + b;
+
+  return "#" + r + g + b;
+}

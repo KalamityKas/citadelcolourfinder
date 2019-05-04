@@ -11,12 +11,21 @@
 	<h1>Citadel Colour Finder</h1>
 	<form id="searchForm">
 		<p>
+			<label for="colour">Search by Colour:</label>
+		</p>
+		<p>
 			<input class="jscolor" id="colour" />
 			<input type="button" id="search" value="Search" />
 		</p>
 	</form>
 
-
+	<div class="imagePicker">
+		<p>Or upload an image:</p>
+		<input type="file" accept="image/*" class="button" onchange="loadPicture(event)" />
+		<p>
+			<img id="imageTarget" />
+		</p>
+	</div>
 
 	<div id="results"></div>
 </div>
